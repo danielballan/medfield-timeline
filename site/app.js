@@ -6,13 +6,19 @@ const AVAILABLE_LANGS = [
 
 let currentLang = 'en';
 let strings = {};
+let entryStrings = {};
 
 async function loadStrings(lang) {
   const resp = await fetch(`i18n/${lang}.json`);
-  strings = await resp.json();
+  const data = await resp.json();
+  entryStrings = data.entries || {};
+  // Separate UI strings from entry strings
+  strings = Object.fromEntries(
+    Object.entries(data).filter(([k]) => k !== 'entries')
+  );
   currentLang = lang;
   document.documentElement.lang = lang;
-  applyStrings();
+  renderTimeline();
 }
 
 function t(key, replacements) {
@@ -25,22 +31,15 @@ function t(key, replacements) {
   return s;
 }
 
-function applyStrings() {
-  document.querySelectorAll('[data-i18n]').forEach(el => {
-    el.textContent = t(el.dataset.i18n);
-  });
-  // Update toggle buttons
-  document.querySelectorAll('.entry-toggle').forEach(btn => {
-    const desc = btn.previousElementSibling;
-    btn.textContent = desc.classList.contains('open') ? t('read_less') : t('read_more');
-  });
+function te(entryId, field) {
+  return entryStrings[entryId]?.[field] || '';
 }
 
 // === Data & Rendering ===
 let entries = [];
 
 async function init() {
-  // Load entries
+  // Load structural data
   const resp = await fetch('data/entries.json');
   entries = await resp.json();
 
@@ -65,32 +64,38 @@ async function init() {
   });
 
   await loadStrings(preferred);
-  renderTimeline();
   setupLightbox();
-  setupScrollObserver();
 }
 
 function renderTimeline() {
   const container = document.getElementById('timeline');
-  container.innerHTML = entries.map((e, i) => `
+  container.innerHTML = entries.map((e, i) => {
+    const title = te(e.id, 'title');
+    const yearDisplay = te(e.id, 'year_display');
+    const description = te(e.id, 'description');
+    const artDesc = te(e.id, 'art_description');
+    const altText = (artDesc || title) + ' — artwork by ' + e.artist;
+
+    return `
     <article class="entry" id="entry-${e.id}" data-index="${i}">
       <div class="entry-card">
-        <div class="entry-year">${e.year_display}</div>
+        <div class="entry-year">${yearDisplay}</div>
         ${e.image
           ? `<div class="entry-img-wrap" data-full="${e.image}" role="button" tabindex="0" aria-label="View artwork">
-               <img src="${e.image_thumb}" alt="${e.art_description || e.title} — artwork by ${e.artist}" loading="lazy">
+               <img src="${e.image_thumb}" alt="${altText}" loading="lazy">
              </div>`
-          : `<div class="entry-img-wrap"><div class="no-image" data-i18n="no_image">${t('no_image')}</div></div>`
+          : `<div class="entry-img-wrap"><div class="no-image">${t('no_image')}</div></div>`
         }
         <div class="entry-body">
-          <h2 class="entry-title">${e.title}</h2>
-          <div class="entry-artist"><span data-i18n="artist">${t('artist')}</span>: ${e.artist}</div>
-          <p class="entry-description">${e.description}</p>
-          <button class="entry-toggle" data-i18n-toggle>${t('read_more')}</button>
+          <h2 class="entry-title">${title}</h2>
+          <div class="entry-artist">${t('artist')}: ${e.artist}</div>
+          <p class="entry-description">${description}</p>
+          <button class="entry-toggle">${t('read_more')}</button>
         </div>
       </div>
     </article>
-  `).join('');
+  `;
+  }).join('');
 
   // Toggle descriptions
   container.querySelectorAll('.entry-toggle').forEach(btn => {
@@ -106,6 +111,14 @@ function renderTimeline() {
     const handler = () => openLightbox(wrap.dataset.full, wrap.querySelector('img').alt);
     wrap.addEventListener('click', handler);
     wrap.addEventListener('keydown', e => { if (e.key === 'Enter') handler(); });
+  });
+
+  // Re-apply scroll observer
+  setupScrollObserver();
+
+  // Update static i18n elements
+  document.querySelectorAll('[data-i18n]').forEach(el => {
+    el.textContent = t(el.dataset.i18n);
   });
 }
 
@@ -142,7 +155,9 @@ function setupScrollObserver() {
     });
   }, { threshold: 0.1 });
 
-  document.querySelectorAll('.entry:nth-child(n+6)').forEach(el => observer.observe(el));
+  document.querySelectorAll('.entry:nth-child(n+6)').forEach(el => {
+    if (!el.classList.contains('visible')) observer.observe(el);
+  });
 }
 
 // === Hash-based deep linking ===
@@ -151,7 +166,6 @@ function scrollToHash() {
     const el = document.querySelector(location.hash);
     if (el) {
       el.scrollIntoView({ behavior: 'smooth', block: 'center' });
-      // auto-open description
       const desc = el.querySelector('.entry-description');
       const btn = el.querySelector('.entry-toggle');
       if (desc && !desc.classList.contains('open')) {
@@ -164,7 +178,6 @@ function scrollToHash() {
 
 // Go!
 init().then(() => {
-  // Small delay so DOM is ready
   setTimeout(scrollToHash, 100);
 });
 window.addEventListener('hashchange', scrollToHash);

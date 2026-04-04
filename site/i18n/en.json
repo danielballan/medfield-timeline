@@ -11,5 +11,205 @@
   "read_less": "Read less",
   "language": "Language",
   "no_image": "Artwork coming soon",
-  "lang_name": "English"
+  "lang_name": "English",
+  "entries": {
+    "big-bang": {
+      "title": "Big Bang",
+      "year_display": "13.8 billion years ago",
+      "description": "The universe begins with the Big Bang — an explosion of space, time, matter, and energy from an infinitely dense point. Everything that exists today originated in this moment.",
+      "art_description": "Explosion"
+    },
+    "sun-planets-form": {
+      "title": "Our sun and planets form",
+      "year_display": "4.5 billion years ago",
+      "description": "A cloud of gas and dust collapses under gravity to form our solar system. The Sun ignites at the center, and the planets coalesce from the remaining disk of material.",
+      "art_description": ""
+    },
+    "life-on-earth": {
+      "title": "Life on Earth",
+      "year_display": "4 billion years ago",
+      "description": "The first single-celled organisms appear in Earth's oceans. These microscopic life forms are the ancestors of every living thing on the planet.",
+      "art_description": "Single-celled organism?"
+    },
+    "stone-tools": {
+      "title": "Stone tools used",
+      "year_display": "2 million years ago",
+      "description": "Early hominids begin shaping stones into tools for cutting, scraping, and hunting. This marks one of the earliest signs of human ingenuity and the beginning of technology.",
+      "art_description": "Stone tool"
+    },
+    "fire-tamed": {
+      "title": "Fire tamed",
+      "year_display": "500,000 years ago",
+      "description": "Humans learn to control fire, transforming daily life. Fire provides warmth, protection from predators, and the ability to cook food — which may have driven brain development.",
+      "art_description": "Fire!"
+    },
+    "symbolic-art": {
+      "title": "First humans who made symbolic art",
+      "year_display": "50,000 years ago",
+      "description": "Humans begin creating symbolic art — cave paintings, carvings, and decorative objects. This marks a leap in cognitive ability: the power to represent the world through symbols.",
+      "art_description": "Cave art"
+    },
+    "bow-and-arrow": {
+      "title": "Bow and arrow used",
+      "year_display": "20,000 BCE",
+      "description": "The bow and arrow is invented, giving humans a powerful ranged weapon for hunting. This technology spreads across the world and remains in use for thousands of years.",
+      "art_description": "Bow and arrow"
+    },
+    "animals-domesticated": {
+      "title": "Animals domesticated",
+      "year_display": "8,000 BCE",
+      "description": "Humans begin domesticating animals for food, labor, and companionship. Dogs, sheep, goats, and cattle are among the first, fundamentally changing human societies.",
+      "art_description": "Chicken?"
+    },
+    "irrigation": {
+      "title": "Irrigation used",
+      "year_display": "5,000 BCE",
+      "description": "Farmers develop irrigation systems to channel water to their crops. This allows agriculture in drier regions and supports larger, more stable communities.",
+      "art_description": "Plant growing"
+    },
+    "sundial": {
+      "title": "Sundial invented",
+      "year_display": "4,000 BCE",
+      "description": "The sundial is one of humanity's first timekeeping devices, using the position of the Sun's shadow to tell the time of day.",
+      "art_description": "Sundial"
+    },
+    "wheeled-carts": {
+      "title": "Wheeled carts invented",
+      "year_display": "3,500 BCE",
+      "description": "The wheel is applied to carts, revolutionizing transportation and trade. Goods can now be moved over long distances far more efficiently.",
+      "art_description": "Cart with wheels"
+    },
+    "horses-tamed": {
+      "title": "Horses tamed",
+      "year_display": "2,000 BCE",
+      "description": "Horses are domesticated, transforming travel, warfare, and agriculture. The horse becomes one of the most important animals in human civilization.",
+      "art_description": "Horse"
+    },
+    "alphabet": {
+      "title": "Alphabet developed",
+      "year_display": "1,500 BCE",
+      "description": "The first true alphabets emerge, where each symbol represents a sound rather than a word or idea. This makes writing far more accessible and adaptable.",
+      "art_description": "Letters"
+    },
+    "first-zoo": {
+      "title": "First zoo established",
+      "year_display": "700 BCE",
+      "description": "The earliest known zoo is established, collecting exotic animals for display. Rulers use them to demonstrate power and wealth.",
+      "art_description": "Zoo animals"
+    },
+    "first-library": {
+      "title": "First library established",
+      "year_display": "640 BCE",
+      "description": "The first known library is established, collecting written works in one place. Libraries become centers of knowledge and learning for millennia to come.",
+      "art_description": "Scrolls"
+    },
+    "solar-eclipse-predicted": {
+      "title": "Solar eclipse predicted",
+      "year_display": "585 BCE",
+      "description": "Thales of Miletus reportedly predicts a solar eclipse — one of the first known successful scientific predictions. It demonstrates that natural events follow understandable patterns.",
+      "art_description": "Eclipse"
+    },
+    "heliocentrism": {
+      "title": "Heliocentrism suggested",
+      "year_display": "350 BCE",
+      "description": "The idea that the Earth revolves around the Sun is first proposed by ancient Greek astronomers. This revolutionary idea challenges the prevailing belief that Earth is the center of the universe.",
+      "art_description": "Cartoon sun in the center of a circle with cartoon Earth"
+    },
+    "botany-book": {
+      "title": "First systematic book on botany written",
+      "year_display": "320 BCE",
+      "description": "Theophrastus writes the first systematic study of plants, categorizing hundreds of species. He becomes known as the 'father of botany.'",
+      "art_description": "First book that categorized plants"
+    },
+    "waterclock": {
+      "title": "Water clock developed",
+      "year_display": "280 BCE",
+      "description": "The water clock (clepsydra) is developed as the first device to measure time without relying on the Sun. Water flows at a steady rate to mark the passage of hours.",
+      "art_description": ""
+    },
+    "paper": {
+      "title": "Paper made",
+      "year_display": "105 CE",
+      "description": "Cai Lun in China develops a process for making paper from plant fibers. Paper gradually replaces bamboo strips, silk, and papyrus, transforming how knowledge is recorded and shared.",
+      "art_description": "Paper"
+    },
+    "mechanical-clocks": {
+      "title": "Mechanical clocks invented",
+      "year_display": "1335 CE",
+      "description": "The first mechanical clocks appear in European churches and town squares. They use weights and gears to keep time, structuring daily life around precise hours.",
+      "art_description": ""
+    },
+    "gregorian-calendar": {
+      "title": "Modern (Gregorian) calendar adopted",
+      "year_display": "1582 CE",
+      "description": "Pope Gregory XIII introduces the Gregorian calendar, correcting inaccuracies in the Julian calendar. It becomes the international standard still used today.",
+      "art_description": ""
+    },
+    "last-dodo": {
+      "title": "Last dodo died",
+      "year_display": "1681 CE",
+      "description": "The dodo, a flightless bird native to Mauritius, goes extinct due to hunting and habitat destruction by humans. It becomes an enduring symbol of human-caused extinction.",
+      "art_description": "Dodo"
+    },
+    "bacteria-discovered": {
+      "title": "Bacteria discovered",
+      "year_display": "1683 CE",
+      "description": "Antonie van Leeuwenhoek observes bacteria through a microscope he built himself. He calls them 'animalcules' — opening the door to microbiology.",
+      "art_description": "Bacteria"
+    },
+    "pollination": {
+      "title": "Pollination studied",
+      "year_display": "1763 CE",
+      "description": "Scientists begin systematic study of how pollen transfers between flowers, revealing the crucial role of insects in plant reproduction.",
+      "art_description": "Pollinator on flower"
+    },
+    "steam-railway": {
+      "title": "First steam-powered railway train built",
+      "year_display": "1814 CE",
+      "description": "George Stephenson builds the first steam-powered railway locomotive. This invention launches the Railway Age, transforming transportation, industry, and daily life around the world.",
+      "art_description": "Train"
+    },
+    "global-warming-predicted": {
+      "title": "Global warming predicted",
+      "year_display": "1856 CE",
+      "description": "Eunice Newton Foote articulates the possibility of global warming from carbon dioxide in the atmosphere. Her experiment showed that CO₂ traps heat — a foundational discovery for climate science.",
+      "art_description": ""
+    },
+    "plastic-invented": {
+      "title": "Plastic invented",
+      "year_display": "1869 CE",
+      "description": "The first synthetic polymer is invented by John Wesley Hyatt, inspired by a $10,000 prize for an ivory substitute. For the first time, manufacturing is no longer limited by natural materials.",
+      "art_description": ""
+    },
+    "human-evolution": {
+      "title": "Theory of human evolution published",
+      "year_display": "1871 CE",
+      "description": "Charles Darwin publishes 'The Descent of Man,' extending his theory of evolution to humans. He argues that humans share common ancestors with other primates.",
+      "art_description": "Primates?"
+    },
+    "telephone": {
+      "title": "Telephone patented",
+      "year_display": "1876 CE",
+      "description": "Alexander Graham Bell patents the telephone, enabling real-time voice communication over long distances. It transforms business, relationships, and the pace of life.",
+      "art_description": "Phone"
+    },
+    "music-recorded": {
+      "title": "Music recorded",
+      "year_display": "1877 CE",
+      "description": "Thomas Edison invents the phonograph, the first device to record and play back sound. For the first time, music and voices can be preserved and replayed.",
+      "art_description": "Phonograph?"
+    },
+    "first-ford-car": {
+      "title": "First Ford car",
+      "year_display": "1908 CE",
+      "description": "The Ford Model T rolls off the assembly line, making automobiles affordable for ordinary families. Henry Ford's mass production techniques change manufacturing forever.",
+      "art_description": "Car"
+    },
+    "municipal-compost": {
+      "title": "First municipal compost",
+      "year_display": "1996 CE",
+      "description": "The first city-wide residential composting program is established, pioneering municipal organic waste collection. It marks a shift toward sustainable waste management.",
+      "art_description": ""
+    }
+  }
 }
