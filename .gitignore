@@ -1,0 +1,5 @@
+uploads/
+timeline_full*.png
+timeline_preview.png
+timeline.pdf
+convert.sh

@@ -1,0 +1,15 @@
+{
+  "site_title": "Medfield Timeline",
+  "site_subtitle": "A walk through the history of everything",
+  "intro": "This timeline exists as artwork on a fence in Medfield, Baltimore. Each piece was drawn by a student. Scroll through billions of years of history.",
+  "years_ago": "{{n}} years ago",
+  "bce": "{{n}} BCE",
+  "ce": "{{n}} CE",
+  "artist": "Artist",
+  "source": "Source",
+  "read_more": "Read more",
+  "read_less": "Read less",
+  "language": "Language",
+  "no_image": "Artwork coming soon",
+  "lang_name": "English"
+}

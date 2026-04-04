@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Medfield Timeline</title>
+  <meta name="description" content="A walk through the history of everything — artwork by Medfield students on a fence.">
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=DM+Serif+Display&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <h1 class="site-title" data-i18n="site_title">Medfield Timeline</h1>
+      <p class="site-subtitle" data-i18n="site_subtitle">A walk through the history of everything</p>
+      <nav class="lang-switcher" aria-label="Language">
+        <select id="lang-select" aria-label="Language"></select>
+      </nav>
+    </div>
+  </header>
+
+  <main class="timeline" id="timeline">
+    <!-- entries injected by JS -->
+  </main>
+
+  <!-- Lightbox overlay -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Artwork detail" hidden>
+    <button class="lightbox-close" aria-label="Close">&times;</button>
+    <img class="lightbox-img" id="lightbox-img" src="" alt="">
+  </div>
+
+  <footer class="site-footer">
+    <p>Artwork by students of Medfield, Baltimore</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

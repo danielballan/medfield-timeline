@@ -1,0 +1,170 @@
+// === i18n ===
+const AVAILABLE_LANGS = [
+  { code: 'en', name: 'English' }
+  // Add more: { code: 'es', name: 'Español' }, etc.
+];
+
+let currentLang = 'en';
+let strings = {};
+
+async function loadStrings(lang) {
+  const resp = await fetch(`i18n/${lang}.json`);
+  strings = await resp.json();
+  currentLang = lang;
+  document.documentElement.lang = lang;
+  applyStrings();
+}
+
+function t(key, replacements) {
+  let s = strings[key] || key;
+  if (replacements) {
+    for (const [k, v] of Object.entries(replacements)) {
+      s = s.replace(`{{${k}}}`, v);
+    }
+  }
+  return s;
+}
+
+function applyStrings() {
+  document.querySelectorAll('[data-i18n]').forEach(el => {
+    el.textContent = t(el.dataset.i18n);
+  });
+  // Update toggle buttons
+  document.querySelectorAll('.entry-toggle').forEach(btn => {
+    const desc = btn.previousElementSibling;
+    btn.textContent = desc.classList.contains('open') ? t('read_less') : t('read_more');
+  });
+}
+
+// === Data & Rendering ===
+let entries = [];
+
+async function init() {
+  // Load entries
+  const resp = await fetch('data/entries.json');
+  entries = await resp.json();
+
+  // Setup lang switcher
+  const select = document.getElementById('lang-select');
+  AVAILABLE_LANGS.forEach(l => {
+    const opt = document.createElement('option');
+    opt.value = l.code;
+    opt.textContent = l.name;
+    select.appendChild(opt);
+  });
+
+  // Detect preferred language
+  const saved = localStorage.getItem('timeline-lang');
+  const browserLang = navigator.language?.slice(0, 2);
+  const preferred = saved || (AVAILABLE_LANGS.find(l => l.code === browserLang) ? browserLang : 'en');
+  select.value = preferred;
+
+  select.addEventListener('change', () => {
+    localStorage.setItem('timeline-lang', select.value);
+    loadStrings(select.value);
+  });
+
+  await loadStrings(preferred);
+  renderTimeline();
+  setupLightbox();
+  setupScrollObserver();
+}
+
+function renderTimeline() {
+  const container = document.getElementById('timeline');
+  container.innerHTML = entries.map((e, i) => `
+    <article class="entry" id="entry-${e.id}" data-index="${i}">
+      <div class="entry-card">
+        <div class="entry-year">${e.year_display}</div>
+        ${e.image
+          ? `<div class="entry-img-wrap" data-full="${e.image}" role="button" tabindex="0" aria-label="View artwork">
+               <img src="${e.image_thumb}" alt="${e.art_description || e.title} — artwork by ${e.artist}" loading="lazy">
+             </div>`
+          : `<div class="entry-img-wrap"><div class="no-image" data-i18n="no_image">${t('no_image')}</div></div>`
+        }
+        <div class="entry-body">
+          <h2 class="entry-title">${e.title}</h2>
+          <div class="entry-artist"><span data-i18n="artist">${t('artist')}</span>: ${e.artist}</div>
+          <p class="entry-description">${e.description}</p>
+          <button class="entry-toggle" data-i18n-toggle>${t('read_more')}</button>
+        </div>
+      </div>
+    </article>
+  `).join('');
+
+  // Toggle descriptions
+  container.querySelectorAll('.entry-toggle').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const desc = btn.previousElementSibling;
+      desc.classList.toggle('open');
+      btn.textContent = desc.classList.contains('open') ? t('read_less') : t('read_more');
+    });
+  });
+
+  // Image click -> lightbox
+  container.querySelectorAll('.entry-img-wrap[data-full]').forEach(wrap => {
+    const handler = () => openLightbox(wrap.dataset.full, wrap.querySelector('img').alt);
+    wrap.addEventListener('click', handler);
+    wrap.addEventListener('keydown', e => { if (e.key === 'Enter') handler(); });
+  });
+}
+
+// === Lightbox ===
+function setupLightbox() {
+  const lb = document.getElementById('lightbox');
+  const close = () => { lb.hidden = true; document.body.style.overflow = ''; };
+  lb.querySelector('.lightbox-close').addEventListener('click', close);
+  lb.addEventListener('click', (e) => { if (e.target === lb) close(); });
+  document.addEventListener('keydown', (e) => { if (e.key === 'Escape') close(); });
+}
+
+function openLightbox(src, alt) {
+  const lb = document.getElementById('lightbox');
+  const img = document.getElementById('lightbox-img');
+  img.src = src;
+  img.alt = alt;
+  lb.hidden = false;
+  document.body.style.overflow = 'hidden';
+}
+
+// === Scroll-triggered fade-in ===
+function setupScrollObserver() {
+  if (!('IntersectionObserver' in window)) {
+    document.querySelectorAll('.entry').forEach(e => e.classList.add('visible'));
+    return;
+  }
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('visible');
+        observer.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.1 });
+
+  document.querySelectorAll('.entry:nth-child(n+6)').forEach(el => observer.observe(el));
+}
+
+// === Hash-based deep linking ===
+function scrollToHash() {
+  if (location.hash) {
+    const el = document.querySelector(location.hash);
+    if (el) {
+      el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      // auto-open description
+      const desc = el.querySelector('.entry-description');
+      const btn = el.querySelector('.entry-toggle');
+      if (desc && !desc.classList.contains('open')) {
+        desc.classList.add('open');
+        btn.textContent = t('read_less');
+      }
+    }
+  }
+}
+
+// Go!
+init().then(() => {
+  // Small delay so DOM is ready
+  setTimeout(scrollToHash, 100);
+});
+window.addEventListener('hashchange', scrollToHash);
