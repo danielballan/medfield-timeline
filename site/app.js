@@ -1,7 +1,8 @@
 // === i18n ===
 const AVAILABLE_LANGS = [
   { code: 'en', name: 'English' }
-  // Add more: { code: 'es', name: 'Español' }, etc.
+  // DRAFT — uncomment after native speaker review:
+  // ,{ code: 'es', name: 'Español' }
 ];
 
 let currentLang = 'en';

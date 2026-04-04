@@ -1,0 +1,215 @@
+{
+  "site_title": "Línea de tiempo de Medfield",
+  "site_subtitle": "Un recorrido por la historia de todo",
+  "intro": "Esta línea de tiempo existe como obra de arte en una cerca en Medfield, Baltimore. Cada pieza fue dibujada por un estudiante. Desplázate a través de miles de millones de años de historia.",
+  "years_ago": "Hace {{n}} años",
+  "bce": "{{n}} a.C.",
+  "ce": "{{n}} d.C.",
+  "artist": "Artista",
+  "source": "Fuente",
+  "read_more": "Leer más",
+  "read_less": "Leer menos",
+  "language": "Idioma",
+  "no_image": "Obra de arte próximamente",
+  "lang_name": "Español",
+  "entries": {
+    "big-bang": {
+      "title": "Big Bang",
+      "year_display": "Hace 13.800 millones de años",
+      "description": "El universo comienza con el Big Bang, una explosión de espacio, tiempo, materia y energía desde un punto infinitamente denso. Todo lo que existe hoy se originó en este momento.",
+      "art_description": "Explosión"
+    },
+    "sun-planets-form": {
+      "title": "Nuestro sol y los planetas se forman",
+      "year_display": "Hace 4.500 millones de años",
+      "description": "Una nube de gas y polvo colapsa por la gravedad para formar nuestro sistema solar. El Sol se enciende en el centro y los planetas se forman a partir del disco restante de material.",
+      "art_description": ""
+    },
+    "life-on-earth": {
+      "title": "Vida en la Tierra",
+      "year_display": "Hace 4.000 millones de años",
+      "description": "Los primeros organismos unicelulares aparecen en los océanos de la Tierra. Estas formas de vida microscópicas son los ancestros de todos los seres vivos del planeta.",
+      "art_description": "¿Organismo unicelular?"
+    },
+    "stone-tools": {
+      "title": "Uso de herramientas de piedra",
+      "year_display": "Hace 2 millones de años",
+      "description": "Los primeros homínidos comienzan a tallar piedras para crear herramientas para cortar, raspar y cazar. Esto marca una de las primeras señales del ingenio humano y el comienzo de la tecnología.",
+      "art_description": "Herramienta de piedra"
+    },
+    "fire-tamed": {
+      "title": "El fuego domesticado",
+      "year_display": "Hace 500.000 años",
+      "description": "Los humanos aprenden a controlar el fuego, transformando la vida diaria. El fuego proporciona calor, protección contra depredadores y la capacidad de cocinar alimentos, lo que pudo haber impulsado el desarrollo cerebral.",
+      "art_description": "¡Fuego!"
+    },
+    "symbolic-art": {
+      "title": "Primeros humanos que crearon arte simbólico",
+      "year_display": "Hace 50.000 años",
+      "description": "Los humanos comienzan a crear arte simbólico: pinturas rupestres, tallas y objetos decorativos. Esto marca un salto en la capacidad cognitiva: el poder de representar el mundo a través de símbolos.",
+      "art_description": "Arte rupestre"
+    },
+    "bow-and-arrow": {
+      "title": "Uso del arco y la flecha",
+      "year_display": "20.000 a.C.",
+      "description": "Se inventa el arco y la flecha, dando a los humanos un arma poderosa de largo alcance para la caza. Esta tecnología se extiende por todo el mundo y permanece en uso durante miles de años.",
+      "art_description": "Arco y flecha"
+    },
+    "animals-domesticated": {
+      "title": "Animales domesticados",
+      "year_display": "8.000 a.C.",
+      "description": "Los humanos comienzan a domesticar animales para alimento, trabajo y compañía. Los perros, ovejas, cabras y vacas están entre los primeros, cambiando fundamentalmente las sociedades humanas.",
+      "art_description": "¿Gallina?"
+    },
+    "irrigation": {
+      "title": "Uso del riego",
+      "year_display": "5.000 a.C.",
+      "description": "Los agricultores desarrollan sistemas de riego para canalizar agua hacia sus cultivos. Esto permite la agricultura en regiones más secas y sostiene comunidades más grandes y estables.",
+      "art_description": "Planta creciendo"
+    },
+    "sundial": {
+      "title": "Invención del reloj de sol",
+      "year_display": "4.000 a.C.",
+      "description": "El reloj de sol es uno de los primeros dispositivos de medición del tiempo de la humanidad, utilizando la posición de la sombra del Sol para indicar la hora del día.",
+      "art_description": "Reloj de sol"
+    },
+    "wheeled-carts": {
+      "title": "Invención de los carros con ruedas",
+      "year_display": "3.500 a.C.",
+      "description": "La rueda se aplica a los carros, revolucionando el transporte y el comercio. Los bienes ahora pueden transportarse a largas distancias de manera mucho más eficiente.",
+      "art_description": "Carro con ruedas"
+    },
+    "horses-tamed": {
+      "title": "Caballos domesticados",
+      "year_display": "2.000 a.C.",
+      "description": "Los caballos son domesticados, transformando los viajes, la guerra y la agricultura. El caballo se convierte en uno de los animales más importantes de la civilización humana.",
+      "art_description": "Caballo"
+    },
+    "alphabet": {
+      "title": "Desarrollo del alfabeto",
+      "year_display": "1.500 a.C.",
+      "description": "Surgen los primeros alfabetos verdaderos, donde cada símbolo representa un sonido en lugar de una palabra o idea. Esto hace que la escritura sea mucho más accesible y adaptable.",
+      "art_description": "Letras"
+    },
+    "first-zoo": {
+      "title": "Primer zoológico establecido",
+      "year_display": "700 a.C.",
+      "description": "Se establece el primer zoológico conocido, reuniendo animales exóticos para exhibición. Los gobernantes los usan para demostrar poder y riqueza.",
+      "art_description": "Animales de zoológico"
+    },
+    "first-library": {
+      "title": "Primera biblioteca establecida",
+      "year_display": "640 a.C.",
+      "description": "Se establece la primera biblioteca conocida, reuniendo obras escritas en un solo lugar. Las bibliotecas se convierten en centros de conocimiento y aprendizaje durante milenios.",
+      "art_description": "Pergaminos"
+    },
+    "solar-eclipse-predicted": {
+      "title": "Eclipse solar predicho",
+      "year_display": "585 a.C.",
+      "description": "Se dice que Tales de Mileto predijo un eclipse solar, una de las primeras predicciones científicas exitosas conocidas. Demuestra que los eventos naturales siguen patrones comprensibles.",
+      "art_description": "Eclipse"
+    },
+    "heliocentrism": {
+      "title": "Heliocentrismo propuesto",
+      "year_display": "350 a.C.",
+      "description": "La idea de que la Tierra gira alrededor del Sol es propuesta por primera vez por astrónomos de la antigua Grecia. Esta idea revolucionaria desafía la creencia predominante de que la Tierra es el centro del universo.",
+      "art_description": "Sol caricatura en el centro de un círculo con la Tierra caricatura"
+    },
+    "botany-book": {
+      "title": "Primer libro sistemático de botánica escrito",
+      "year_display": "320 a.C.",
+      "description": "Teofrasto escribe el primer estudio sistemático de las plantas, categorizando cientos de especies. Se le conoce como el 'padre de la botánica'.",
+      "art_description": "Primer libro que categorizó plantas"
+    },
+    "waterclock": {
+      "title": "Reloj de agua desarrollado",
+      "year_display": "280 a.C.",
+      "description": "El reloj de agua (clepsidra) se desarrolla como el primer dispositivo para medir el tiempo sin depender del Sol. El agua fluye a un ritmo constante para marcar el paso de las horas.",
+      "art_description": ""
+    },
+    "paper": {
+      "title": "Fabricación del papel",
+      "year_display": "105 d.C.",
+      "description": "Cai Lun en China desarrolla un proceso para fabricar papel a partir de fibras vegetales. El papel reemplaza gradualmente las tiras de bambú, la seda y el papiro, transformando la forma en que se registra y comparte el conocimiento.",
+      "art_description": "Papel"
+    },
+    "mechanical-clocks": {
+      "title": "Invención de los relojes mecánicos",
+      "year_display": "1335 d.C.",
+      "description": "Los primeros relojes mecánicos aparecen en iglesias y plazas de Europa. Utilizan pesas y engranajes para medir el tiempo, estructurando la vida diaria en torno a horas precisas.",
+      "art_description": ""
+    },
+    "gregorian-calendar": {
+      "title": "Adopción del calendario moderno (gregoriano)",
+      "year_display": "1582 d.C.",
+      "description": "El papa Gregorio XIII introduce el calendario gregoriano, corrigiendo las imprecisiones del calendario juliano. Se convierte en el estándar internacional que se sigue utilizando hoy en día.",
+      "art_description": ""
+    },
+    "last-dodo": {
+      "title": "Muerte del último dodo",
+      "year_display": "1681 d.C.",
+      "description": "El dodo, un ave no voladora nativa de Mauricio, se extingue debido a la caza y la destrucción de su hábitat por los humanos. Se convierte en un símbolo perdurable de la extinción causada por el ser humano.",
+      "art_description": "Dodo"
+    },
+    "bacteria-discovered": {
+      "title": "Descubrimiento de las bacterias",
+      "year_display": "1683 d.C.",
+      "description": "Antonie van Leeuwenhoek observa bacterias a través de un microscopio que él mismo construyó. Las llama 'animálculos', abriendo la puerta a la microbiología.",
+      "art_description": "Bacterias"
+    },
+    "pollination": {
+      "title": "Estudio de la polinización",
+      "year_display": "1763 d.C.",
+      "description": "Los científicos comienzan el estudio sistemático de cómo el polen se transfiere entre las flores, revelando el papel crucial de los insectos en la reproducción de las plantas.",
+      "art_description": "Polinizador en una flor"
+    },
+    "steam-railway": {
+      "title": "Primera locomotora de tren a vapor construida",
+      "year_display": "1814 d.C.",
+      "description": "George Stephenson construye la primera locomotora ferroviaria a vapor. Este invento lanza la Era del Ferrocarril, transformando el transporte, la industria y la vida cotidiana en todo el mundo.",
+      "art_description": "Tren"
+    },
+    "global-warming-predicted": {
+      "title": "Calentamiento global predicho",
+      "year_display": "1856 d.C.",
+      "description": "Eunice Newton Foote plantea la posibilidad del calentamiento global por el dióxido de carbono en la atmósfera. Su experimento demostró que el CO₂ atrapa el calor, un descubrimiento fundamental para la ciencia del clima.",
+      "art_description": ""
+    },
+    "plastic-invented": {
+      "title": "Invención del plástico",
+      "year_display": "1869 d.C.",
+      "description": "El primer polímero sintético es inventado por John Wesley Hyatt, inspirado por un premio de $10.000 para encontrar un sustituto del marfil. Por primera vez, la manufactura ya no está limitada a los materiales naturales.",
+      "art_description": ""
+    },
+    "human-evolution": {
+      "title": "Publicación de la teoría de la evolución humana",
+      "year_display": "1871 d.C.",
+      "description": "Charles Darwin publica 'El origen del hombre', extendiendo su teoría de la evolución a los seres humanos. Argumenta que los humanos comparten ancestros comunes con otros primates.",
+      "art_description": "¿Primates?"
+    },
+    "telephone": {
+      "title": "Teléfono patentado",
+      "year_display": "1876 d.C.",
+      "description": "Alexander Graham Bell patenta el teléfono, permitiendo la comunicación por voz en tiempo real a larga distancia. Transforma los negocios, las relaciones y el ritmo de vida.",
+      "art_description": "Teléfono"
+    },
+    "music-recorded": {
+      "title": "Música grabada",
+      "year_display": "1877 d.C.",
+      "description": "Thomas Edison inventa el fonógrafo, el primer dispositivo para grabar y reproducir sonido. Por primera vez, la música y las voces pueden preservarse y reproducirse.",
+      "art_description": "¿Fonógrafo?"
+    },
+    "first-ford-car": {
+      "title": "Primer automóvil Ford",
+      "year_display": "1908 d.C.",
+      "description": "El Ford Modelo T sale de la línea de ensamblaje, haciendo que los automóviles sean accesibles para las familias comunes. Las técnicas de producción en masa de Henry Ford cambian la manufactura para siempre.",
+      "art_description": "Automóvil"
+    },
+    "municipal-compost": {
+      "title": "Primer compostaje municipal",
+      "year_display": "1996 d.C.",
+      "description": "Se establece el primer programa municipal de compostaje residencial a nivel de toda una ciudad, pionero en la recolección de residuos orgánicos municipales. Marca un cambio hacia la gestión sostenible de residuos.",
+      "art_description": ""
+    }
+  }
+}
