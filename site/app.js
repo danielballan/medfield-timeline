@@ -1,10 +1,17 @@
 // === i18n ===
 const AVAILABLE_LANGS = [
   { code: 'en', name: 'English' }
-  // DRAFT — uncomment after native speaker review:
-  // ,{ code: 'es', name: 'Español' }
-  // ,{ code: 'ne', name: 'नेपाली' }
 ];
+
+// Draft translations — only visible at /preview
+const DRAFT_LANGS = [
+  { code: 'es', name: 'Español' },
+  { code: 'ne', name: 'नेपाली' }
+];
+
+if (window.location.pathname.includes('/preview')) {
+  AVAILABLE_LANGS.push(...DRAFT_LANGS);
+}
 
 let currentLang = 'en';
 let strings = {};
