@@ -13,12 +13,15 @@ if (window.location.pathname.includes('/preview')) {
   AVAILABLE_LANGS.push(...DRAFT_LANGS);
 }
 
+// Cache-busting version — increment on deploy
+const CACHE_V = '20260404a';
+
 let currentLang = 'en';
 let strings = {};
 let entryStrings = {};
 
 async function loadStrings(lang) {
-  const resp = await fetch(`i18n/${lang}.json`);
+  const resp = await fetch(`i18n/${lang}.json?v=${CACHE_V}`);
   const data = await resp.json();
   entryStrings = data.entries || {};
   // Separate UI strings from entry strings
@@ -49,7 +52,7 @@ let entries = [];
 
 async function init() {
   // Load structural data
-  const resp = await fetch('data/entries.json');
+  const resp = await fetch(`data/entries.json?v=${CACHE_V}`);
   entries = await resp.json();
 
   // Setup lang switcher
