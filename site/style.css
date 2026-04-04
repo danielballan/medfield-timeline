@@ -2,7 +2,7 @@
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
 body {
-  font-family: 'DM Sans', system-ui, sans-serif;
+  font-family: 'DM Sans', 'Noto Sans Devanagari', system-ui, sans-serif;
   background: #faf9f6;
   color: #2c2c2c;
   line-height: 1.6;
@@ -26,7 +26,7 @@ body {
   background: linear-gradient(to bottom, rgba(26,26,46,0.08), transparent);
 }
 .site-title {
-  font-family: 'DM Serif Display', serif;
+  font-family: 'DM Serif Display', 'Noto Sans Devanagari', serif;
   font-size: clamp(1.8rem, 5vw, 2.8rem);
   font-weight: 400;
   letter-spacing: 0.02em;
@@ -119,7 +119,7 @@ body {
 }
 
 .entry-year {
-  font-family: 'DM Serif Display', serif;
+  font-family: 'DM Serif Display', 'Noto Sans Devanagari', serif;
   font-size: 0.8rem;
   color: #8b7355;
   letter-spacing: 0.05em;
@@ -160,7 +160,7 @@ body {
   padding: 0.5rem 1rem 1rem;
 }
 .entry-title {
-  font-family: 'DM Serif Display', serif;
+  font-family: 'DM Serif Display', 'Noto Sans Devanagari', serif;
   font-size: 1.15rem;
   color: #1a1a2e;
   margin-bottom: 0.25rem;
