@@ -3,6 +3,7 @@ const AVAILABLE_LANGS = [
   { code: 'en', name: 'English' }
   // DRAFT — uncomment after native speaker review:
   // ,{ code: 'es', name: 'Español' }
+  // ,{ code: 'ne', name: 'नेपाली' }
 ];
 
 let currentLang = 'en';
