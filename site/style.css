@@ -3,7 +3,7 @@
 html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
 body {
   font-family: 'DM Sans', 'Noto Sans Devanagari', system-ui, sans-serif;
-  background: #faf9f6;
+  background: #f4f7f5;
   color: #2c2c2c;
   line-height: 1.6;
   min-height: 100vh;
@@ -11,7 +11,7 @@ body {
 
 /* === Header === */
 .site-header {
-  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+  background: linear-gradient(135deg, #284B3B 0%, #1a3a2a 40%, #007F3C 100%);
   color: #fff;
   padding: 2.5rem 1rem 2rem;
   text-align: center;
@@ -23,7 +23,7 @@ body {
   bottom: -20px;
   left: 0; right: 0;
   height: 20px;
-  background: linear-gradient(to bottom, rgba(26,26,46,0.08), transparent);
+  background: linear-gradient(to bottom, rgba(40,75,59,0.08), transparent);
 }
 .site-title {
   font-family: 'DM Serif Display', 'Noto Sans Devanagari', serif;
@@ -34,7 +34,7 @@ body {
 }
 .site-subtitle {
   font-size: clamp(0.9rem, 2.5vw, 1.1rem);
-  opacity: 0.8;
+  opacity: 0.85;
   font-weight: 400;
 }
 .lang-switcher {
@@ -66,7 +66,7 @@ body {
   top: 0;
   bottom: 0;
   width: 3px;
-  background: linear-gradient(to bottom, #e0d8ce, #c4b8a8, #e0d8ce);
+  background: linear-gradient(to bottom, #007F3C, #4a9e6e, #007F3C);
   border-radius: 2px;
 }
 
@@ -97,14 +97,14 @@ body {
   top: 8px;
   width: 18px;
   height: 18px;
-  background: #faf9f6;
-  border: 3px solid #8b7355;
+  background: #f4f7f5;
+  border: 3px solid #007F3C;
   border-radius: 50%;
   z-index: 1;
 }
 .entry:first-child::before {
-  background: #8b7355;
-  box-shadow: 0 0 0 4px rgba(139,115,85,0.2);
+  background: #007F3C;
+  box-shadow: 0 0 0 4px rgba(0,127,60,0.2);
 }
 
 .entry-card {
@@ -121,7 +121,7 @@ body {
 .entry-year {
   font-family: 'DM Serif Display', 'Noto Sans Devanagari', serif;
   font-size: 0.8rem;
-  color: #8b7355;
+  color: #007F3C;
   letter-spacing: 0.05em;
   padding: 0.75rem 1rem 0;
   text-transform: uppercase;
@@ -134,7 +134,7 @@ body {
   cursor: pointer;
   position: relative;
   aspect-ratio: 1;
-  background: #f0ece4;
+  background: #e8f0eb;
 }
 .entry-img-wrap img {
   width: 100%;
@@ -151,7 +151,7 @@ body {
   align-items: center;
   justify-content: center;
   height: 100%;
-  color: #b0a898;
+  color: #7a9e87;
   font-size: 0.9rem;
   font-style: italic;
 }
@@ -162,13 +162,13 @@ body {
 .entry-title {
   font-family: 'DM Serif Display', 'Noto Sans Devanagari', serif;
   font-size: 1.15rem;
-  color: #1a1a2e;
+  color: #284B3B;
   margin-bottom: 0.25rem;
   line-height: 1.3;
 }
 .entry-artist {
   font-size: 0.8rem;
-  color: #8b7355;
+  color: #4a9e6e;
   margin-bottom: 0.5rem;
 }
 .entry-description {
@@ -182,7 +182,7 @@ body {
 .entry-toggle {
   background: none;
   border: none;
-  color: #5a7d9a;
+  color: #007F3C;
   font-size: 0.85rem;
   cursor: pointer;
   padding: 0.25rem 0;
@@ -228,9 +228,9 @@ body {
 .site-footer {
   text-align: center;
   padding: 2rem 1rem;
-  color: #999;
+  color: #7a9e87;
   font-size: 0.85rem;
-  border-top: 1px solid #e8e4de;
+  border-top: 1px solid #d4e4da;
 }
 
 /* === Scroll-triggered animation for entries beyond initial batch === */
@@ -249,14 +249,18 @@ body {
 }
 
 @media (prefers-color-scheme: dark) {
-  body { background: #1a1a1a; color: #e0e0e0; }
-  .entry-card { background: #2a2a2a; box-shadow: 0 1px 4px rgba(0,0,0,0.2); }
+  body { background: #1a2420; color: #e0e0e0; }
+  .entry-card { background: #243830; box-shadow: 0 1px 4px rgba(0,0,0,0.2); }
   .entry-card:hover { box-shadow: 0 2px 8px rgba(0,0,0,0.3); }
-  .entry-title { color: #e8e4de; }
+  .entry-title { color: #b8dcc5; }
+  .entry-year { color: #4a9e6e; }
+  .entry-artist { color: #4a9e6e; }
   .entry-description { color: #bbb; }
-  .entry::before { background: #1a1a1a; }
-  .entry:first-child::before { background: #8b7355; }
-  .site-footer { border-top-color: #333; color: #666; }
-  .entry-img-wrap { background: #333; }
-  .entry-img-wrap .no-image { color: #666; }
+  .entry-toggle { color: #4a9e6e; }
+  .entry::before { background: #1a2420; }
+  .entry:first-child::before { background: #007F3C; }
+  .timeline::before { background: linear-gradient(to bottom, #007F3C, #2d5e3f, #007F3C); }
+  .site-footer { border-top-color: #2d3d34; color: #5a7e65; }
+  .entry-img-wrap { background: #2d3d34; }
+  .entry-img-wrap .no-image { color: #5a7e65; }
 }

@@ -14,7 +14,7 @@ if (window.location.pathname.includes('/preview')) {
 }
 
 // Cache-busting version — increment on deploy
-const CACHE_V = '20260404b';
+const CACHE_V = '20260404c';
 
 let currentLang = 'en';
 let strings = {};
