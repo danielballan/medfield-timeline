@@ -166,6 +166,15 @@ body {
   margin-bottom: 0.25rem;
   line-height: 1.3;
 }
+.entry-anchor {
+  color: inherit;
+  text-decoration: none;
+}
+.entry-anchor:hover {
+  text-decoration: underline;
+  text-decoration-color: #007F3C;
+  text-underline-offset: 2px;
+}
 .entry-artist {
   font-size: 0.8rem;
   color: #4a9e6e;

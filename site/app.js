@@ -14,7 +14,7 @@ if (window.location.pathname.includes('/preview')) {
 }
 
 // Cache-busting version — increment on deploy
-const CACHE_V = '20260404f';
+const CACHE_V = '20260404g';
 
 let currentLang = 'en';
 let strings = {};
@@ -99,7 +99,7 @@ function renderTimeline() {
           : `<div class="entry-img-wrap"><div class="no-image">${t('no_image')}</div></div>`
         }
         <div class="entry-body">
-          <h2 class="entry-title">${title}</h2>
+          <h2 class="entry-title"><a href="#entry-${e.id}" class="entry-anchor">${title}</a></h2>
           <div class="entry-artist">${t('artist')}: ${e.artist}</div>
           <p class="entry-description">${description}</p>
           <button class="entry-toggle">${t('read_more')}</button>
